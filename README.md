@@ -1,59 +1,35 @@
-# PpwAngular21
+# Práctica 01: Instalación y Configuración del Entorno Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.9.
+**Autor:** David Alejandro Larriva Castillo
+**Institución:** Universidad Politécnica Salesiana (UPS)
 
-## Development server
+## Propósito del Proyecto
+Este repositorio contiene el proyecto incremental `ppw-angular-21` creado con Angular 21, con el sistema de rutas (`routing`) habilitado y configurado sin Server-Side Rendering (`ssr=false`). El objetivo principal de esta práctica es establecer una estructura inicial limpia, escalable y mantenible basada en características (`features`).
 
-To start a local development server, run:
+## Estructura Inicial
+Se ha implementado una arquitectura base enfocada en la escalabilidad:
+- Creación de la carpeta `features/home/pages/` para aislar los componentes de la página de inicio.
+- Configuración de un enrutador global con una ruta raíz (`''`) y una ruta comodín (`'**'`) para redirecciones seguras.
+- Limpieza del componente raíz (`app.component`) dejando únicamente el `<router-outlet />`.
+- Configuración de estilos globales básicos.
 
-```bash
-ng serve
-```
+## Evidencias
+Las capturas de pantalla que validan la correcta ejecución de los comandos se encuentran alojadas en el directorio `evidencias/assets/`:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+**1. Salida de ng version en la terminal:**
+![ng version](evidencias/assets/01-ng-version.png)
 
-## Code scaffolding
+**2. Proceso de creación del proyecto con Angular CLI:**
+![ng new](evidencias/assets/01-ng-new.png)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+**3. Página de bienvenida de Angular antes de modificar:**
+![app inicio](evidencias/assets/01-app-inicio.png)
 
-```bash
-ng generate component component-name
-```
+**4. HomePage funcionando en localhost:4200:**
+![home page](evidencias/assets/01-home-page.png)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Instrucciones de Ejecución
+Para arrancar el servidor de desarrollo local, ejecuta los siguientes comandos en la terminal utilizando `pnpm`:
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+    pnpm install
+    pnpm start
